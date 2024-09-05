@@ -1,0 +1,14 @@
+<div class="users-container">
+    <div class="users-header">
+        Country : {{selectedCountryName}} <br>
+      </div>
+    <div class="users-header">Sector-wise Predicted Emission Values <i class="bi bi-info-circle" [wjTooltip]="usersTooltip" [wjTooltipPosition]="6"></i></div>
+    <wj-flex-grid [itemsSource]="selectedCountryData" [isReadOnly]="true" [selectionMode]="'Row'" [headersVisibility]="'Column'">
+        <wj-flex-grid-column binding="country" header="Country" [width]="'*'"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="countryCode" header="Country Code"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="sectors" header="Sector" [width]="'100px'"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="predictedValue" header="Predicted_2030_values"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="unit" header="Units"></wj-flex-grid-column>
+    </wj-flex-grid>
+    <br>
+</div>

@@ -1,0 +1,36 @@
+<main class="livemap-grid">
+
+  <div class="livemap load-info">
+    <app-global-info></app-global-info>
+  </div>
+
+  <div class="livemap map">
+    <app-map-component (countryName)="countryName($event)" (hitCountry)="selectedCountry($event)"></app-map-component>
+  </div>
+
+  <div *ngIf="selectedCountryName !== ''" class="livemap top-platforms">
+    <app-top-emission-info [selectedCountryName]="selectedCountryName"></app-top-emission-info>
+  </div>
+
+  <div *ngIf="selectedCountryName !== ''" class="livemap user-info">
+    <app-country-table [selectedCountryName]="selectedCountryName"></app-country-table>
+  </div>
+
+   <div *ngIf="selectedCountryName !== ''" class="livemap sessions">
+    <app-overall-info [selectedCountryName]="selectedCountryName"></app-overall-info>
+  </div>
+
+  <!-- <div class="livemap issue-info">
+    <app-factors-table></app-factors-table>
+  </div>
+
+  <div class="livemap top-countries">
+    <app-top-country-info></app-top-country-info>
+  </div> -->
+
+  
+  <!-- <div class="livemap browsers">
+    <app-top-emission-parameters></app-top-emission-parameters>
+  </div> -->
+ 
+</main>

@@ -1,0 +1,27 @@
+<div class="platforms-container">
+    <div class="platforms-header">Prediction for the Selected Country : {{selectedCountryName}}<i class="bi bi-info-circle" [wjTooltip]="platformTooltip" [wjTooltipPosition]="6"></i></div><br>
+    <div class="platforms-info">
+        <div *ngIf="selectedCountryName === 'France'">
+            <img src="assets/france_prediction_graph.jpeg" alt="Prediction graph" style="height: 400px; width: 500px;">
+        </div>
+        <div *ngIf="selectedCountryName === 'India'">
+            <img src="assets/india_prediction_graph.jpeg" alt="Prediction graph" style="height: 400px; width: 500px;">
+        </div>
+        <div *ngIf="selectedCountryName === 'Russia'">
+            <img src="assets/russia_prediction_graph.jpeg" alt="Prediction graph" style="height: 400px; width: 500px;">
+        </div>
+        <div *ngIf="selectedCountryName === 'Australia'">
+            <img src="assets/australia_prediction_graph.jpeg" alt="Prediction graph" style="height: 400px; width: 500px;">
+        </div>
+        <div *ngIf="selectedCountryName === 'Canada'">
+            <img src="assets/canada_prediction_graph.jpeg" alt="Prediction graph" style="height: 400px; width: 500px;">
+        </div>
+        <div *ngIf="selectedCountryName === 'United States'">
+            <img src="assets/us_prediction_graph.jpeg" alt="Prediction graph" style="height: 400px; width: 500px;">
+        </div>
+        <div *ngIf="selectedCountryName === 'Brazil'">
+            <img src="assets/brazil_prediction_graph.jpeg" alt="Prediction graph" style="height: 400px; width: 500px;">
+        </div>
+        <wj-flex-pie [header]="'Sector-wise split-up'" [bindingName]="'sector'" [binding]="'value'" [itemsSource]="sessionData" [palette]="palette"></wj-flex-pie>
+    </div>
+</div>
