@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/climate_dashboard/",
             "outputPath": "dist/climate_dashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
